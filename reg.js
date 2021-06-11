@@ -48,6 +48,11 @@ submitBtn.addEventListener("click",function(){
    current+=1;
    setTimeout(function(){
       alert("registration successfull");
-      location.reload();
+      window.location.href="feed.html";
    },800);
 });
+
+function btnfunc(){
+   setTimeout(function(){document.location.href ="feed.html"},500);
+   alert("registration successfull");
+}
