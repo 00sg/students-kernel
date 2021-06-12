@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <title>landing</title>
+        <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link rel="stylesheet" href="start.css">
 
     </head>
     <body>
-
-        <div class="wrap">
+      <div class="page-container">
+       <div class="wrap">
             <header>
                 <div class="logo">
-                    <img src="logo.png" alt="">
+                   <img src="logo.png" alt=""> 
                 </div>
-                   </header>
-                <div class="content">
-                    <img id="handpic" src="logo1.png" alt="">
-                    <h1>Lets learn and grow togather </h1>
+              
                     <div class="btn-group">
                         <a href="signin.html" >Login</a>
-                        <a href="regstudent.html">Register</a>
+                        <a id="button" href="#">Register</a>
                     </div>
-                </div>
+     
+                </header>
                 
+        </div>
+        <div class="bg-modal">
+          <div class="modal-content">
+            <h2>choose if you are a:</h2>
+            <div class="btn-reg" >
+            <a href="regstudent.html">Student</a>
+            <a href="regteacher.html">Teacher</a>
+            </div>
+            <i id="close" class="fa fa-times"></i>
+          </div>
         </div>
 
 
+
+
+        <div>
         <section id="sec-about" class="sec-about pt-5 pb-5">
             <div class="container">
               <div class="row justify-content-center text-center">
@@ -64,7 +79,7 @@
               </div>
             </div>
           </section>
-        
+        </div>
         
         <!--<div class="custom-shape-divider-top-1622559678">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -73,5 +88,42 @@
                 <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
             </svg>
         </div>-->
+
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="landbg.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="logo">
+                        <img src="logo4.png" height="300" width="300" alt=""> 
+                     </div>
+                     <h1>Welcome to Student's Kernel</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="landingbg.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="bg1.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+        <script src="start.js"></script>
+      </div>
+<!--
+        <footer>
+          <span>EvyatarDa(C) All rights Reserved</span>
+        </footer>
+        -->
     </body>
 </html>
