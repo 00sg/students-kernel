@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   overflow: hidden;
   position: relative;
+  background-image: url("bg.png");
 }
 .container {
   background-color: #ffffff;
@@ -96,6 +97,65 @@ body {
 .reglink {
   color: rgb(59, 59, 59);
 }
+
+.bg-modal {
+  width: 100%;
+  height: 150vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+.modal-content {
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  margin-top: 10%;
+  border-radius: 4px;
+}
+.modal-content .btn-reg {
+  position: relative;
+  margin-top: 20%;
+  left: 10%;
+  word-spacing: 15px;
+}
+.modal-content a {
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+  padding: 15px 10px;
+  width: 30%;
+  text-decoration: none;
+  color: white;
+  border-radius: 50px;
+  background-color: #102c55dc;
+  font-weight: bolder;
+}
+.modal-content a:hover {
+  background-color: #04193b;
+  color: white;
+}
+.modal-content h2 {
+  position: relative;
+  top: 20%;
+  left: 15%;
+  font-size: 45px;
+  font-weight: 500;
+}
+.modal-content i {
+  position: relative;
+  color: black;
+  top: -65%;
+  left: 93%;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+/*
 .custom-shape-divider-top-1622559678 {
   position: absolute;
   top: 0;
@@ -113,14 +173,16 @@ body {
 }
 .custom-shape-divider-top-1622559678 .shape-fill {
   fill: #1f7a8c;
-}
+}*/
 .tagline {
   z-index: 3;
-  font-size: 20px;
+  font-size: 25px;
   position: absolute;
   margin-left: -50%;
   text-transform: capitalize;
   letter-spacing: 2%;
   padding: 2%;
-  color: rgb(34, 34, 34);
+  color: rgb(0, 0, 0);
+  text-shadow: rgb(255, 255, 255) 0 0 10px;
+  font-weight: 1500;
 }
