@@ -83,17 +83,3 @@
   color: #ffffff;
   font-size: 36px;
 }
-.footer-card {
-  display: grid;
-  grid-column-gap: 50px;
-  position: absolute;
-  width: 350px;
-  height: 120px;
-  right: 0;
-  top: 70%;
-  background-color: #0d183eda;
-  text-align: center;
-  border-radius: 8px;
-  overflow: hidden;
-  z-index: 3;
-}
