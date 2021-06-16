@@ -1,3 +1,7 @@
+@import url("feed-component/nav.css");
+@import url("feed-component/profilecard.css");
+@import url("feed-component/feedtopquestionbar.css");
+@import url("feed-component/feedpost.css");
 * {
   padding: 0;
   margin: 0;
@@ -7,156 +11,25 @@
 }
 body {
   font-family: "HelveticaNeue";
-  background: #eff6e0;
-}
-
-/*TOP NAVIGATION */
-nav {
-  background: #eff6e0;
-  height: 50px;
-  width: 100%;
-  box-shadow: 0px 0 1px 2px #028aa527;
-  box-sizing: border-box;
-}
-label.logo {
-  color: #1f7a8c;
-  font-size: 28px;
-  line-height: 50px;
-  padding: 0 30px;
-  font-weight: bold;
-}
-nav ul {
-  float: right;
-  margin-right: 30px;
-}
-nav ul li {
-  display: inline-block;
-  line-height: 50px;
-}
-
-nav ul li a {
-  color: #1f7a8c;
-  font-size: 17px;
-  text-transform: uppercase;
-  display: block;
-  padding: 0px 17px;
-  border-radius: 1px;
-}
-
-li a.active,
-li a:hover {
-  background: #1f7a8cbe;
-  transition: 0.5s;
-  border-radius: 7%;
-  color: white;
-}
-
-.checkbtn {
-  font-size: 30px;
-  color: #1f7a8c;
-  float: left;
-  line-height: 50px;
-  margin-left: 40px;
-  cursor: pointer;
-  display: none;
-}
-
-/*SIDE NAVIGATION*/
-.searchbar {
-  margin-top: 15%;
-  margin-bottom: 40%;
-}
-#searchpanel {
-  position: absolute;
-  width: 190px;
-  display: inline-block;
-  font-size: 17px;
-  height: 5vh;
-  border-radius: 12px;
-  border: none;
-  box-shadow: 0 0 2px 0 #1d1d1d;
-  outline: none;
-  margin-left: -50%;
-  background-color: #598392;
-}
-#searchpanel::placeholder {
-  color: rgba(255, 255, 255, 0.514);
-  padding: 5%;
-}
-input[type="text"] {
-  padding: 10%;
-}
-#submitbtn {
-  left: 45%;
+  background-color: rgb(241, 241, 241);
+  height: 100%;
   position: relative;
-  display: inline-block;
-  padding: 8px 8px;
-  font-size: 17px;
-  border: 1px #1d1d1d;
-  cursor: pointer;
-  background-color: #35726600;
+  overflow: auto;
 }
-#check {
-  display: none;
-}
-
-.sidebar {
-  position: fixed;
-  width: 15%;
-  height: 100vh;
-  background: #1f7a8cad;
-  font-size: 0.65em;
-  right: 0%;
-  border-radius: 3%;
-}
-
-.sidebar ul {
-  position: relative;
-  margin: 0 15%;
-  text-align: center;
-  top: 7%;
-  font-weight: bold;
-  list-style: none;
-  justify-content: center;
-}
-
-.sidebar li {
-  position: relative;
-  margin: 15% 0;
-}
-
-.sidebar a {
-  line-height: 5em;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.4em;
-  color: #28505f;
-  display: block;
-  font-size: 15px;
-  font-weight: bolder;
-  transition: all ease-out 300ms;
-}
-
-.sidebar a:not(.active)::after {
-  opacity: 0.2;
-}
-
-.sidebar a:not(.active):hover {
-  background-color: #1f7a8cbe;
-  color: white;
-}
-
-.sidebar a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 0.2em;
-  background: black;
-  left: 0;
-  bottom: 0;
+html {
+  height: 100%;
 }
 
 /*MEDIA QUERY*/
+
+@media (max-width: 1150px) {
+  .profile-card {
+    width: 280px;
+    height: 600px;
+    right: 0;
+    top: 10%;
+  }
+}
 @media (max-width: 952px) {
   label.logo {
     font-size: 30px;
@@ -175,13 +48,19 @@ input[type="text"] {
   }
 
   #searchpanel {
-    width: 160px;
+    width: 110%;
     left: 35px;
   }
   #submitbtn {
-    left: 50%;
+    right: -35%;
     padding: 10px 10px;
     justify-content: center;
+  }
+  .profile-card {
+    width: 250px;
+    height: 700px;
+    right: 0;
+    top: 10%;
   }
 }
 
@@ -197,14 +76,17 @@ input[type="text"] {
     display: block;
   }
   ul {
+    color: #0d183e;
     position: fixed;
     width: 30%;
     height: 100vh;
     top: 50px;
     left: -100%;
     text-align: center;
+    z-index: 400;
   }
   nav ul li {
+    background-color: #e0dfdfec;
     display: block;
   }
   nav ul li a {
@@ -231,7 +113,7 @@ input[type="text"] {
   }
 
   .sidebar {
-    position: fixed;
+    display: none;
     width: 20%;
     height: 100vh;
   }
@@ -256,5 +138,43 @@ input[type="text"] {
     height: 0.2em;
     left: 15%;
     bottom: 0;
+  }
+  section {
+    margin-right: 20%;
+  }
+  .profile-card {
+    width: 200px;
+    height: 700px;
+    right: 0;
+    top: 10%;
+  }
+  .question-box {
+    width: 65%;
+    margin-left: -25%;
+  }
+  .post {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10;
+    width: 65%;
+    left: 5%;
+  }
+}
+@media (max-width: 620px) {
+  .profile-card {
+    display: none;
+  }
+  .question-box {
+    width: 80%;
+    margin-left: 0%;
+  }
+  .post {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10;
+    width: 80%;
+    left: 10%;
   }
 }
