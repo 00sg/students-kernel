@@ -36,7 +36,22 @@ nav ul li a {
   padding: 0px 17px;
   border-radius: 1px;
 }
-
+.btnsignout {
+  outline: none;
+  border: none;
+  padding: 0px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background: transparent;
+}
+.btnsignout:hover {
+  background: #0d183ed5;
+  transition: 0.5s;
+  border-radius: 7%;
+  color: white;
+  text-decoration: none;
+}
 li a.active,
 li a:hover {
   background: #0d183ed5;
